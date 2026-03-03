@@ -1,5 +1,3 @@
-<h1 style="color:red;">WERKT DIT?</h1>
-
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -23,9 +21,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Nunito', sans-serif;
     background: var(--soft-bg);
@@ -34,355 +30,96 @@
     overflow-x: hidden;
   }
 
-  /* ── NAV ── */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(10px);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(10px);
     border-bottom: 2px solid var(--yellow);
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
+    padding: 0 2rem; display: flex; justify-content: space-between;
+    align-items: center; height: 60px;
   }
-  .nav-logo {
-    font-family: 'Fraunces', serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--navy);
-  }
+  .nav-logo { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; color: var(--navy); }
   .nav-logo span { color: var(--teal); }
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-  }
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; }
   .nav-links a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
+    text-decoration: none; font-size: 0.85rem; font-weight: 700;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--teal); }
 
-  /* ── HERO ── */
   .hero {
-    padding-top: 60px;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+    padding-top: 60px; min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center; position: relative; overflow: hidden;
   }
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--navy) 0%, #2a3f6e 60%, var(--teal-dark) 100%);
-    z-index: 0;
-  }
-  .hero-dots {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
-    background-size: 32px 32px;
-    z-index: 1;
-  }
-  .hero-shape {
-    position: absolute;
-    bottom: -80px; right: -80px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: var(--teal);
-    opacity: 0.12;
-    z-index: 1;
-  }
-  .hero-shape2 {
-    position: absolute;
-    top: -60px; left: 40%;
-    width: 300px; height: 300px;
-    border-radius: 50%;
-    background: var(--yellow);
-    opacity: 0.08;
-    z-index: 1;
-  }
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 4rem 3rem 4rem 5rem;
-    color: var(--white);
-    animation: fadeUp 0.8s ease both;
-  }
-  .hero-tag {
-    display: inline-block;
-    background: var(--yellow);
-    color: var(--navy);
-    font-size: 0.75rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 0.3rem 0.9rem;
-    border-radius: 99px;
-    margin-bottom: 1.2rem;
-  }
-  .hero-name {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 0.5rem;
-  }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, var(--navy) 0%, #2a3f6e 60%, var(--teal-dark) 100%); z-index: 0; }
+  .hero-dots { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px); background-size: 32px 32px; z-index: 1; }
+  .hero-shape { position: absolute; bottom: -80px; right: -80px; width: 500px; height: 500px; border-radius: 50%; background: var(--teal); opacity: 0.12; z-index: 1; }
+  .hero-shape2 { position: absolute; top: -60px; left: 40%; width: 300px; height: 300px; border-radius: 50%; background: var(--yellow); opacity: 0.08; z-index: 1; }
+  .hero-content { position: relative; z-index: 2; padding: 4rem 3rem 4rem 5rem; color: var(--white); animation: fadeUp 0.8s ease both; }
+  .hero-tag { display: inline-block; background: var(--yellow); color: var(--navy); font-size: 0.75rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.9rem; border-radius: 99px; margin-bottom: 1.2rem; }
+  .hero-name { font-family: 'Fraunces', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 0.5rem; }
   .hero-name span { color: var(--yellow); }
-  .hero-subtitle {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-  }
-  .hero-tagline {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: var(--teal);
-    margin-bottom: 2rem;
-    line-height: 1.5;
-  }
-  .hero-actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.75rem 1.5rem;
-    border-radius: 99px;
-    font-weight: 900;
-    font-size: 0.9rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: none;
-  }
+  .hero-subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-weight: 600; }
+  .hero-tagline { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.25rem; color: var(--teal); margin-bottom: 2rem; line-height: 1.5; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.75rem 1.5rem; border-radius: 99px; font-weight: 900; font-size: 0.9rem; cursor: pointer; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; border: none; }
   .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
   .btn-primary { background: var(--yellow); color: var(--navy); }
   .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
   .btn-outline:hover { border-color: var(--white); }
 
-  /* hero photo */
-  .hero-photo-wrap {
-    position: relative;
-    z-index: 2;
-    padding: 4rem 5rem 4rem 2rem;
-    display: flex;
-    justify-content: center;
-    animation: fadeUp 0.9s 0.15s ease both;
-  }
-  .photo-card {
-    position: relative;
-    width: 300px;
-  }
-  .photo-placeholder {
-    width: 280px;
-    height: 340px;
-    border-radius: var(--radius);
-    background: linear-gradient(145deg, #3a5380, #2a3f6e);
-    border: 4px solid rgba(255,255,255,0.15);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    color: rgba(255,255,255,0.5);
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-align: center;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
-  }
+  .hero-photo-wrap { position: relative; z-index: 2; padding: 4rem 5rem 4rem 2rem; display: flex; justify-content: center; animation: fadeUp 0.9s 0.15s ease both; }
+  .photo-card { position: relative; width: 300px; }
+  .photo-placeholder { width: 280px; height: 340px; border-radius: var(--radius); background: linear-gradient(145deg, #3a5380, #2a3f6e); border: 4px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 700; text-align: center; box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1); }
   .photo-placeholder svg { opacity: 0.4; }
-  .photo-badge {
-    position: absolute;
-    bottom: -15px;
-    right: -15px;
-    background: var(--teal);
-    color: white;
-    padding: 0.6rem 1rem;
-    border-radius: var(--radius);
-    font-size: 0.8rem;
-    font-weight: 900;
-    box-shadow: 0 8px 20px rgba(0,184,160,0.4);
-    line-height: 1.3;
-    text-align: center;
-  }
+  .photo-badge { position: absolute; bottom: -15px; right: -15px; background: var(--teal); color: white; padding: 0.6rem 1rem; border-radius: var(--radius); font-size: 0.8rem; font-weight: 900; box-shadow: 0 8px 20px rgba(0,184,160,0.4); line-height: 1.3; text-align: center; }
   .photo-badge strong { display: block; font-size: 1.1rem; }
-  .photo-sticker {
-    position: absolute;
-    top: -15px;
-    left: -20px;
-    background: var(--yellow);
-    color: var(--navy);
-    padding: 0.5rem 0.8rem;
-    border-radius: var(--radius);
-    font-size: 0.75rem;
-    font-weight: 900;
-    transform: rotate(-5deg);
-    box-shadow: 0 4px 15px rgba(255,209,102,0.5);
-  }
+  .photo-sticker { position: absolute; top: -15px; left: -20px; background: var(--yellow); color: var(--navy); padding: 0.5rem 0.8rem; border-radius: var(--radius); font-size: 0.75rem; font-weight: 900; transform: rotate(-5deg); box-shadow: 0 4px 15px rgba(255,209,102,0.5); }
 
-  /* ── SECTIONS ── */
   section { padding: 5rem 5vw; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
-  .section-label {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 0.25rem 0.8rem;
-    border-radius: 99px;
-    margin-bottom: 0.75rem;
-  }
+  .section-label { display: inline-block; font-size: 0.72rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.12em; padding: 0.25rem 0.8rem; border-radius: 99px; margin-bottom: 0.75rem; }
   .label-teal { background: rgba(0,184,160,0.12); color: var(--teal-dark); }
   .label-coral { background: rgba(255,107,107,0.12); color: #e05050; }
   .label-yellow { background: rgba(255,209,102,0.2); color: #b8860b; }
   .label-navy { background: rgba(26,39,68,0.08); color: var(--navy); }
-
-  .section-title {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(1.8rem, 3vw, 2.4rem);
-    font-weight: 700;
-    color: var(--navy);
-    margin-bottom: 2.5rem;
-    line-height: 1.2;
-  }
+  .section-title { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 700; color: var(--navy); margin-bottom: 2.5rem; line-height: 1.2; }
   .section-title em { color: var(--teal); font-style: normal; }
 
-  /* ── ABOUT ── */
   #over-mij { background: var(--white); }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-  .about-text p {
-    margin-bottom: 1rem;
-    color: var(--text);
-    font-size: 1.05rem;
-  }
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  .stat-card {
-    background: var(--soft-bg);
-    border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
-    border-left: 4px solid var(--teal);
-    transition: transform 0.2s;
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .about-text p { margin-bottom: 1rem; color: var(--text); font-size: 1.05rem; }
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .stat-card { background: var(--soft-bg); border-radius: var(--radius); padding: 1.25rem 1.5rem; border-left: 4px solid var(--teal); transition: transform 0.2s; }
   .stat-card:hover { transform: translateX(4px); }
   .stat-card:nth-child(2) { border-color: var(--coral); }
   .stat-card:nth-child(3) { border-color: var(--yellow); }
   .stat-card:nth-child(4) { border-color: #a78bfa; }
-  .stat-num {
-    font-family: 'Fraunces', serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--navy);
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 0.25rem; }
   .stat-label { font-size: 0.8rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
-  /* ── EXPERIENCE ── */
   #werkervaring { background: var(--soft-bg); }
   .timeline { position: relative; padding-left: 2.5rem; }
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 10px; top: 8px; bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, var(--teal), var(--coral), var(--yellow));
-    border-radius: 99px;
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 2.5rem;
-    animation: fadeUp 0.6s ease both;
-  }
-  .timeline-dot {
-    position: absolute;
-    left: -2.5rem;
-    top: 6px;
-    width: 22px; height: 22px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 3px solid var(--teal);
-    box-shadow: 0 0 0 4px rgba(0,184,160,0.15);
-    z-index: 1;
-  }
+  .timeline::before { content: ''; position: absolute; left: 10px; top: 8px; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--teal), var(--coral), var(--yellow)); border-radius: 99px; }
+  .timeline-item { position: relative; margin-bottom: 2.5rem; animation: fadeUp 0.6s ease both; }
+  .timeline-dot { position: absolute; left: -2.5rem; top: 6px; width: 22px; height: 22px; border-radius: 50%; background: var(--white); border: 3px solid var(--teal); box-shadow: 0 0 0 4px rgba(0,184,160,0.15); z-index: 1; }
   .timeline-item:nth-child(2) .timeline-dot { border-color: var(--coral); box-shadow: 0 0 0 4px rgba(255,107,107,0.15); }
   .timeline-item:nth-child(3) .timeline-dot { border-color: var(--yellow); box-shadow: 0 0 0 4px rgba(255,209,102,0.2); }
-  .timeline-item:nth-child(4) .timeline-dot { border-color: #a78bfa; box-shadow: 0 0 0 4px rgba(167,139,250,0.15); }
-  .timeline-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 1.5rem 1.75rem;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+  .timeline-card { background: var(--white); border-radius: var(--radius); padding: 1.5rem 1.75rem; box-shadow: var(--card-shadow); transition: transform 0.2s, box-shadow 0.2s; }
   .timeline-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
   .tc-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
   .tc-title { font-weight: 900; font-size: 1.05rem; color: var(--navy); }
   .tc-school { font-weight: 700; color: var(--teal); font-size: 0.95rem; }
-  .tc-period {
-    font-size: 0.78rem;
-    font-weight: 900;
-    background: var(--soft-bg);
-    color: var(--muted);
-    padding: 0.25rem 0.7rem;
-    border-radius: 99px;
-    white-space: nowrap;
-  }
+  .tc-period { font-size: 0.78rem; font-weight: 900; background: var(--soft-bg); color: var(--muted); padding: 0.25rem 0.7rem; border-radius: 99px; white-space: nowrap; }
   .tc-desc { font-size: 0.92rem; color: var(--text); margin-top: 0.5rem; }
   .tc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
-  .tag {
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 0.2rem 0.6rem;
-    border-radius: 99px;
-    background: rgba(0,184,160,0.1);
-    color: var(--teal-dark);
-  }
+  .tag { font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 99px; background: rgba(0,184,160,0.1); color: var(--teal-dark); }
 
-  /* ── OPLEIDING ── */
   #opleiding { background: var(--white); }
   .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .edu-card {
-    background: var(--soft-bg);
-    border-radius: var(--radius);
-    padding: 1.75rem;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+  .edu-card { background: var(--soft-bg); border-radius: var(--radius); padding: 1.75rem; position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
   .edu-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow); }
-  .edu-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--teal), var(--yellow));
-  }
+  .edu-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--yellow)); }
   .edu-card:nth-child(2)::before { background: linear-gradient(90deg, var(--coral), #a78bfa); }
   .edu-card:nth-child(3)::before { background: linear-gradient(90deg, var(--yellow), var(--coral)); }
   .edu-year { font-size: 0.78rem; font-weight: 900; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
@@ -390,258 +127,104 @@
   .edu-school { font-weight: 700; color: var(--teal); font-size: 0.9rem; }
   .edu-extra { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
 
-  /* ── VAARDIGHEDEN ── */
-  #vaardigheden { background: var(--soft-bg); }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-  .skill-group h3 {
-    font-size: 0.85rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    margin-bottom: 1rem;
+  /* ── KWALITEITEN ── */
+  #kwaliteiten { background: var(--soft-bg); }
+  .kwaliteiten-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
   }
-  .skill-item { margin-bottom: 1.1rem; }
-  .skill-header { display: flex; justify-content: space-between; margin-bottom: 0.4rem; }
-  .skill-name { font-weight: 700; font-size: 0.92rem; color: var(--navy); }
-  .skill-pct { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
-  .skill-bar {
-    height: 8px;
-    background: #e2e8f0;
-    border-radius: 99px;
-    overflow: hidden;
-  }
-  .skill-fill {
-    height: 100%;
-    border-radius: 99px;
-    background: linear-gradient(90deg, var(--teal), #7dd3c8);
-    transition: width 1s ease;
-    animation: growBar 1.2s ease both;
-  }
-  .skill-fill.coral { background: linear-gradient(90deg, var(--coral), #ff9a9a); }
-  .skill-fill.yellow { background: linear-gradient(90deg, #e8a800, var(--yellow)); }
-  .skill-fill.purple { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
-
-  @keyframes growBar {
-    from { width: 0 !important; }
-  }
-
-  .tools-cloud { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-  .tool-pill {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+  .kwal-card {
     background: var(--white);
-    border: 2px solid #e2e8f0;
-    color: var(--navy);
-    padding: 0.4rem 0.9rem;
-    border-radius: 99px;
-    font-size: 0.82rem;
-    font-weight: 700;
-    transition: border-color 0.2s, transform 0.2s;
-    cursor: default;
-  }
-  .tool-pill:hover { border-color: var(--teal); transform: translateY(-2px); }
-
-  /* ── VISIE ── */
-  #visie {
-    background: var(--navy);
-    position: relative;
-    overflow: hidden;
-  }
-  #visie .section-title { color: var(--white); }
-  #visie .section-title em { color: var(--yellow); }
-  .visie-bg-shape {
-    position: absolute;
-    bottom: -100px; right: -100px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: var(--teal);
-    opacity: 0.07;
-  }
-  .visie-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 3rem;
-    align-items: start;
-    position: relative;
-    z-index: 1;
-  }
-  .visie-quote {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-    color: rgba(255,255,255,0.9);
-    line-height: 1.6;
-    border-left: 4px solid var(--yellow);
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .visie-text {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.98rem;
-    line-height: 1.8;
-  }
-  .visie-pillars {
-    display: grid;
-    gap: 1rem;
-  }
-  .pillar-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
     border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
-    transition: background 0.2s;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 0px solid transparent;
+    position: relative;
+    overflow: hidden;
   }
-  .pillar-card:hover { background: rgba(255,255,255,0.1); }
-  .pillar-icon {
-    width: 42px; height: 42px;
+  .kwal-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--teal), var(--yellow));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .kwal-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); }
+  .kwal-card:hover::after { transform: scaleX(1); }
+  .kwal-card:nth-child(2n)::after { background: linear-gradient(90deg, var(--coral), #a78bfa); }
+  .kwal-card:nth-child(3n)::after { background: linear-gradient(90deg, var(--yellow), var(--teal)); }
+  .kwal-icon {
+    width: 46px; height: 46px;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
     flex-shrink: 0;
   }
+  .kwal-body { flex: 1; }
+  .kwal-title { font-weight: 900; font-size: 1rem; color: var(--navy); margin-bottom: 0.3rem; }
+  .kwal-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.6; }
+
+  #visie { background: var(--navy); position: relative; overflow: hidden; }
+  #visie .section-title { color: var(--white); }
+  #visie .section-title em { color: var(--yellow); }
+  .visie-bg-shape { position: absolute; bottom: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: var(--teal); opacity: 0.07; }
+  .visie-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: start; position: relative; z-index: 1; }
+  .visie-quote { font-family: 'Fraunces', serif; font-style: italic; font-size: clamp(1.3rem, 2.5vw, 1.8rem); color: rgba(255,255,255,0.9); line-height: 1.6; border-left: 4px solid var(--yellow); padding-left: 1.5rem; margin-bottom: 1.5rem; }
+  .visie-text { color: rgba(255,255,255,0.7); font-size: 0.98rem; line-height: 1.8; }
+  .visie-pillars { display: grid; gap: 1rem; }
+  .pillar-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 1.25rem 1.5rem; display: flex; align-items: flex-start; gap: 1rem; transition: background 0.2s; }
+  .pillar-card:hover { background: rgba(255,255,255,0.1); }
+  .pillar-icon { width: 42px; height: 42px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
   .pillar-title { font-weight: 900; color: var(--white); font-size: 0.95rem; margin-bottom: 0.2rem; }
   .pillar-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
 
-  /* ── HOBBY'S ── */
   #hobbys { background: var(--white); }
   .hobby-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.25rem; }
-  .hobby-card {
-    background: var(--soft-bg);
-    border-radius: var(--radius);
-    padding: 1.5rem 1rem;
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: default;
-  }
+  .hobby-card { background: var(--soft-bg); border-radius: var(--radius); padding: 1.5rem 1rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; cursor: default; }
   .hobby-card:hover { transform: translateY(-5px) rotate(-1deg); box-shadow: var(--card-shadow); }
   .hobby-icon { font-size: 2.2rem; margin-bottom: 0.5rem; display: block; }
   .hobby-name { font-weight: 900; font-size: 0.9rem; color: var(--navy); }
   .hobby-desc { font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; }
 
-  /* ── CONTACT ── */
   #contact { background: var(--soft-bg); }
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-  .contact-intro {
-    font-size: 1.05rem;
-    color: var(--text);
-    margin-bottom: 1.5rem;
-  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  .contact-intro { font-size: 1.05rem; color: var(--text); margin-bottom: 1.5rem; }
   .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: color 0.2s, transform 0.2s;
-  }
+  .contact-item { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; color: var(--text); font-weight: 700; font-size: 0.95rem; transition: color 0.2s, transform 0.2s; }
   .contact-item:hover { color: var(--teal); transform: translateX(4px); }
-  .contact-icon {
-    width: 40px; height: 40px;
-    border-radius: 10px;
-    background: var(--white);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    flex-shrink: 0;
-  }
-  .contact-form {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 2rem;
-    box-shadow: var(--card-shadow);
-  }
+  .contact-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--white); box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .contact-form { background: var(--white); border-radius: var(--radius); padding: 2rem; box-shadow: var(--card-shadow); }
   .form-group { margin-bottom: 1.25rem; }
   .form-group label { display: block; font-size: 0.82rem; font-weight: 900; color: var(--navy); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em; }
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 10px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.95rem;
-    color: var(--text);
-    background: var(--soft-bg);
-    outline: none;
-    transition: border-color 0.2s;
-    resize: none;
-  }
-  .form-group input:focus,
-  .form-group textarea:focus { border-color: var(--teal); background: var(--white); }
-  .btn-submit {
-    width: 100%;
-    background: var(--teal);
-    color: var(--white);
-    padding: 0.85rem;
-    border: none;
-    border-radius: 99px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    font-weight: 900;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  }
+  .form-group input, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 2px solid #e2e8f0; border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 0.95rem; color: var(--text); background: var(--soft-bg); outline: none; transition: border-color 0.2s; resize: none; }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--teal); background: var(--white); }
+  .btn-submit { width: 100%; background: var(--teal); color: var(--white); padding: 0.85rem; border: none; border-radius: 99px; font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 900; cursor: pointer; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
   .btn-submit:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,184,160,0.35); }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--navy);
-    color: rgba(255,255,255,0.5);
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.82rem;
-  }
+  footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 2rem; font-size: 0.82rem; }
   footer strong { color: rgba(255,255,255,0.8); }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* scroll reveal */
-  . {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; }
     .hero-content { padding: 3rem 1.5rem 1.5rem; }
     .hero-photo-wrap { padding: 1rem 1.5rem 3rem; }
-    .about-grid,
-    .visie-grid,
-    .contact-grid { grid-template-columns: 1fr; }
+    .about-grid, .visie-grid, .contact-grid { grid-template-columns: 1fr; }
     nav .nav-links { display: none; }
   }
 </style>
 </head>
 <body>
 
-<!-- ── NAVIGATION ── -->
 <nav>
   <div class="nav-logo">[Arjen <span>van de Wetering</span>]</div>
   <ul class="nav-links">
@@ -649,13 +232,12 @@
     <li><a href="#video">Video</a></li>
     <li><a href="#werkervaring">Ervaring</a></li>
     <li><a href="#opleiding">Opleiding</a></li>
-    <li><a href="#vaardigheden">Vaardigheden</a></li>
+    <li><a href="#kwaliteiten">Kwaliteiten</a></li>
     <li><a href="#visie">Visie</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-dots"></div>
@@ -683,176 +265,105 @@
   </div>
 </section>
 
-<!-- ── OVER MIJ ── -->
 <section id="over-mij">
   <div class="section-inner">
     <span class="section-label label-teal">👋 Over mij</span>
     <h2 class="section-title">De tijden veranderen snel —<br><em>en ik verander mee</em></h2>
-<div class="about-text">
-<div class="stats-grid">
+    <div class="about-text">
+      <div class="stats-grid">
         <p>Mijn naam is <strong>[Jouw Naam]</strong> en ik werk met veel plezier als leerkracht in de bovenbouw. Groep 7 en 8 zijn bijzondere jaren: leerlingen groeien enorm, beginnen hun eigen identiteit te ontdekken en staan aan de vooravond van een grote stap — de overgang naar het voortgezet onderwijs.</p>
         <p>Die overgang begeleid ik niet alleen academisch, maar ook persoonlijk. Een kind dat zich gezien voelt, leert beter. Dat is mijn uitgangspunt in alles wat ik doe: van de manier waarop ik een les opbouw tot het gesprekje in de pauze.</p>
         <p>Ik ben een <strong>enthousiaste teamspeler</strong>, hecht aan een goede samenwerking met ouders en collega's, en sta altijd open voor nieuwe methodes en ideeën. Buiten school laad ik op door te bewegen, te lezen en creatief bezig te zijn — die energie neem ik elke dag mee het lokaal in.</p>
       </div>
       <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-num">5+</div>
-          <div class="stat-label">Jaar ervaring</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Scholen</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">28</div>
-          <div class="stat-label">Gem. klasgrootte</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Passie voor onderwijs</div>
-        </div>
+        <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Jaar ervaring</div></div>
+        <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Scholen</div></div>
+        <div class="stat-card"><div class="stat-num">28</div><div class="stat-label">Gem. klasgrootte</div></div>
+        <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Passie voor onderwijs</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── VIDEO ── -->
 <section id="video" style="background: linear-gradient(135deg, #1a2744 0%, #00b8a0 100%); position: relative; overflow: hidden;">
   <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:28px 28px;"></div>
   <div class="section-inner" style="position:relative;z-index:1;">
     <span class="section-label" style="background:rgba(255,209,102,0.2);color:var(--yellow)">🎬 Persoonlijk bericht</span>
     <h2 class="section-title" style="color:white;">Liever <em style="color:var(--yellow);">even kennismaken</em><br><span style="color:rgba(255,255,255,0.8);">voordat u verder scrolt?</span></h2>
-
     <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center;">
-
-      <!-- Video player -->
-      <div class="">
+      <div>
         <div id="video-container" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,0.4);cursor:pointer;background:#0d1b38;aspect-ratio:16/9;" onclick="playVideo()">
-          <!-- Thumbnail / poster -->
           <div id="video-thumb" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(145deg,#1a3a5c,#0d1b38);transition:opacity 0.3s;">
-            <!-- Fake thumbnail with gradient -->
             <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,184,160,0.2),rgba(26,39,68,0.8));"></div>
-            <!-- Silhouette placeholder -->
             <svg style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);opacity:0.15;" width="220" height="240" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="7" r="5"/><path d="M2 22c0-5.5 4.5-10 10-10s10 4.5 10 10"/></svg>
-            <!-- Play button -->
             <div id="play-btn" style="position:relative;z-index:2;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:3px solid rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;transition:transform 0.2s,background 0.2s;margin-bottom:1rem;" onmouseover="this.style.background='rgba(255,255,255,0.25)';this.style.transform='scale(1.08)'" onmouseout="this.style.background='rgba(255,255,255,0.15)';this.style.transform='scale(1)'">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="margin-left:4px"><polygon points="5,3 19,12 5,21"/></svg>
             </div>
             <p style="position:relative;z-index:2;color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:700;">▶ Bekijk mijn persoonlijke introductie</p>
             <p style="position:relative;z-index:2;color:rgba(255,255,255,0.45);font-size:0.75rem;margin-top:0.25rem;">± 90 seconden</p>
           </div>
-
-          <!-- YouTube embed (hidden until play) -->
-          <iframe id="yt-iframe"
-            src=""
-            data-src="https://www.youtube.com/embed/JOUW_VIDEO_ID?autoplay=1&rel=0&modestbranding=1"
-            title="Persoonlijke introductie"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            style="position:absolute;inset:0;width:100%;height:100%;display:none;border:none;">
-          </iframe>
+          <iframe id="yt-iframe" src="" data-src="https://www.youtube.com/embed/JOUW_VIDEO_ID?autoplay=1&rel=0&modestbranding=1" title="Persoonlijke introductie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;display:none;border:none;"></iframe>
         </div>
-
-        <!-- Video tip -->
         <div style="margin-top:1rem;display:flex;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.5);font-size:0.78rem;">
           <span>💡</span>
           <span>Vervang <code style="background:rgba(255,255,255,0.1);padding:0.1rem 0.4rem;border-radius:4px;color:var(--yellow);">JOUW_VIDEO_ID</code> in de HTML door jouw YouTube video-ID</span>
         </div>
       </div>
-
-      <!-- Text alongside -->
-      <div class="" style="color:rgba(255,255,255,0.85);">
+      <div style="color:rgba(255,255,255,0.85);">
         <p style="font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:white;line-height:1.6;margin-bottom:1.25rem;">"Een CV vertelt wat ik heb gedaan. Dit filmpje laat zien wie ik ben."</p>
         <p style="font-size:0.95rem;line-height:1.8;margin-bottom:1rem;color:rgba(255,255,255,0.7);">In deze korte video stel ik mezelf voor: mijn passie voor groep 7 en 8, mijn kijk op onderwijs en waarom ik graag bij uw school zou werken.</p>
         <div style="display:flex;flex-direction:column;gap:0.65rem;margin-top:1.5rem;">
-          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;font-weight:700;">
-            <span style="width:32px;height:32px;border-radius:50%;background:rgba(255,209,102,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">⏱</span>
-            Duurt ongeveer 90 seconden
-          </div>
-          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;font-weight:700;">
-            <span style="width:32px;height:32px;border-radius:50%;background:rgba(0,184,160,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">🎯</span>
-            Opgenomen speciaal voor deze sollicitatie
-          </div>
-          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;font-weight:700;">
-            <span style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,107,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">💬</span>
-            Authentiek en zonder script
-          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;font-weight:700;"><span style="width:32px;height:32px;border-radius:50%;background:rgba(255,209,102,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">⏱</span>Duurt ongeveer 90 seconden</div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;font-weight:700;"><span style="width:32px;height:32px;border-radius:50%;background:rgba(0,184,160,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">🎯</span>Opgenomen speciaal voor deze sollicitatie</div>
+          <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;font-weight:700;"><span style="width:32px;height:32px;border-radius:50%;background:rgba(255,107,107,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">💬</span>Authentiek en zonder script</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── WERKERVARING ── -->
 <section id="werkervaring">
   <div class="section-inner">
     <span class="section-label label-coral">💼 Werkervaring</span>
     <h2 class="section-title">Een <em>groeiend pad</em><br>in het onderwijs</h2>
     <div class="timeline">
-      <div class="timeline-item ">
+      <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="tc-header">
-            <div>
-              <div class="tc-title">Leerkracht Groep 7/8</div>
-              <div class="tc-school">OBS [Naam Basisschool], [Plaatsnaam]</div>
-            </div>
+            <div><div class="tc-title">Leerkracht Groep 7/8</div><div class="tc-school">OBS [Naam Basisschool], [Plaatsnaam]</div></div>
             <span class="tc-period">2022 – heden</span>
           </div>
           <p class="tc-desc">Verantwoordelijk voor een combinatieklas groep 7/8. Ik ontwikkel gedifferentieerde lessen in rekenen, taal en wereldoriëntatie, en begeleid leerlingen intensief tijdens het schooladviestraject voor het voortgezet onderwijs.</p>
-          <div class="tc-tags">
-            <span class="tag">Combinatieklas</span>
-            <span class="tag">Schooladvies VO</span>
-            <span class="tag">Differentiatie</span>
-            <span class="tag">Oudergesprekken</span>
-          </div>
+          <div class="tc-tags"><span class="tag">Combinatieklas</span><span class="tag">Schooladvies VO</span><span class="tag">Differentiatie</span><span class="tag">Oudergesprekken</span></div>
         </div>
       </div>
-
-      <div class="timeline-item ">
+      <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="tc-header">
-            <div>
-              <div class="tc-title">Leerkracht Groep 6</div>
-              <div class="tc-school">CBS [Naam Basisschool], [Plaatsnaam]</div>
-            </div>
+            <div><div class="tc-title">Leerkracht Groep 6</div><div class="tc-school">CBS [Naam Basisschool], [Plaatsnaam]</div></div>
             <span class="tc-period">2020 – 2022</span>
           </div>
           <p class="tc-desc">Begonnen als invalkracht en na een half jaar aangesteld als vaste leerkracht. Opgebouwd aan mijn vaardigheden in klassenmanagement en ingevoerd met de methode Snappet voor gepersonaliseerd leren.</p>
-          <div class="tc-tags">
-            <span class="tag">Snappet</span>
-            <span class="tag">Klassenmanagement</span>
-            <span class="tag">Methodisch werken</span>
-          </div>
+          <div class="tc-tags"><span class="tag">Snappet</span><span class="tag">Klassenmanagement</span><span class="tag">Methodisch werken</span></div>
         </div>
       </div>
-
-      <div class="timeline-item ">
+      <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-card">
           <div class="tc-header">
-            <div>
-              <div class="tc-title">Stagiaire Groep 7</div>
-              <div class="tc-school">OBS [Naam Basisschool], [Plaatsnaam]</div>
-            </div>
+            <div><div class="tc-title">Stagiaire Groep 7</div><div class="tc-school">OBS [Naam Basisschool], [Plaatsnaam]</div></div>
             <span class="tc-period">2018 – 2020</span>
           </div>
           <p class="tc-desc">Afstudeerstage met als specialisatie bovenbouw. Zelfstandig lessen ontwikkeld en gegeven, individuele leerlinggesprekken gevoerd en ouderavonden bijgewoond en mede-begeleid.</p>
-          <div class="tc-tags">
-            <span class="tag">Lesontwerp</span>
-            <span class="tag">Stage bovenbouw</span>
-            <span class="tag">Reflectief werken</span>
-          </div>
+          <div class="tc-tags"><span class="tag">Lesontwerp</span><span class="tag">Stage bovenbouw</span><span class="tag">Reflectief werken</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── OPLEIDING ── -->
 <section id="opleiding">
   <div class="section-inner">
     <span class="section-label label-yellow">🎓 Opleiding</span>
@@ -866,7 +377,7 @@
       </div>
       <div class="edu-card">
         <div class="edu-year">2023</div>
-        <div class="edu-degree">Post-HBO: Gedragsspeicalist in de klas</div>
+        <div class="edu-degree">Post-HBO: Gedragsspecialist in de klas</div>
         <div class="edu-school">Centrum voor Nascholing, [Stad]</div>
         <div class="edu-extra">Specialisatie in omgaan met gedragsproblematiek en passend onderwijs</div>
       </div>
@@ -880,85 +391,81 @@
   </div>
 </section>
 
-<!-- ── VAARDIGHEDEN ── -->
-<section id="vaardigheden">
+<!-- ── KWALITEITEN (vervangt Vaardigheden) ── -->
+<section id="kwaliteiten">
   <div class="section-inner">
-    <span class="section-label label-teal">⚡ Vaardigheden</span>
+    <span class="section-label label-teal">⚡ Kwaliteiten</span>
     <h2 class="section-title">Wat ik <em>meeneem</em><br>het lokaal in</h2>
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Didactiek & Onderwijs</h3>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Differentiatie & maatwerk</span><span class="skill-pct">95%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Klassenmanagement</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">VO-adviesgesprekken</span><span class="skill-pct">88%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Formatief evalueren</span><span class="skill-pct">85%</span></div>
-          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    <div class="kwaliteiten-grid">
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(0,184,160,0.12);color:var(--teal)">🎯</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Sterk in differentiatie</div>
+          <div class="kwal-desc">Ik stem lessen af op verschillende niveaus — zodat elk kind uitgedaagd wordt op zijn of haar eigen manier.</div>
         </div>
       </div>
-      <div class="skill-group ">
-        <h3>Communicatie & Sociaal</h3>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Oudercommunicatie</span><span class="skill-pct">92%</span></div>
-          <div class="skill-bar"><div class="skill-fill coral" style="width:92%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Teamoverleg & samenwerking</span><span class="skill-pct">90%</span></div>
-          <div class="skill-bar"><div class="skill-fill coral" style="width:90%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Sociaal-emotioneel leren</span><span class="skill-pct">87%</span></div>
-          <div class="skill-bar"><div class="skill-fill coral" style="width:87%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Gedragsbegeleiding</span><span class="skill-pct">80%</span></div>
-          <div class="skill-bar"><div class="skill-fill coral" style="width:80%"></div></div>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(255,107,107,0.12);color:var(--coral)">🏛️</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Rustig klassenmanagement</div>
+          <div class="kwal-desc">Ik creëer structuur met een warme aanpak: duidelijke kaders geven kinderen ruimte om te groeien.</div>
         </div>
       </div>
-      <div class="skill-group ">
-        <h3>Digitale tools</h3>
-        <div class="tools-cloud">
-          <span class="tool-pill">📱 Snappet</span>
-          <span class="tool-pill">🖥 Google Classroom</span>
-          <span class="tool-pill">📊 ParnasSys</span>
-          <span class="tool-pill">🎨 Canva</span>
-          <span class="tool-pill">📹 Microsoft Teams</span>
-          <span class="tool-pill">🔢 Bingel</span>
-          <span class="tool-pill">🌍 Gynzy</span>
-          <span class="tool-pill">📝 Cito LOVS</span>
-          <span class="tool-pill">🎯 Kahoot</span>
-          <span class="tool-pill">🤝 Zoom</span>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(255,209,102,0.18);color:#b8860b">💬</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Communicatief sterk</div>
+          <div class="kwal-desc">Met ouders, leerlingen én collega's — ik communiceer helder, eerlijk en opbouwend.</div>
         </div>
       </div>
-      <div class="skill-group ">
-        <h3>Talen</h3>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Nederlands</span><span class="skill-pct">Moedertaal</span></div>
-          <div class="skill-bar"><div class="skill-fill yellow" style="width:100%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Engels</span><span class="skill-pct">B2</span></div>
-          <div class="skill-bar"><div class="skill-fill yellow" style="width:75%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-header"><span class="skill-name">Duits</span><span class="skill-pct">A2</span></div>
-          <div class="skill-bar"><div class="skill-fill yellow" style="width:40%"></div></div>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(167,139,250,0.12);color:#7c3aed">🌱</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Aandacht voor welbevinden</div>
+          <div class="kwal-desc">Ik zie het hele kind — academisch én sociaal-emotioneel. Welbevinden is de basis voor leren.</div>
         </div>
       </div>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(0,184,160,0.12);color:var(--teal)">🤝</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Teamspeler</div>
+          <div class="kwal-desc">Ik draag graag bij aan een positief teamklimaat: door te sparren, initiatieven te delen en mee te denken.</div>
+        </div>
+      </div>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(255,107,107,0.12);color:var(--coral)">💡</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Creatief lesontwerp</div>
+          <div class="kwal-desc">Ik ontwerp lessen die activeren en verrassen — omdat betrokkenheid de motor is van leren.</div>
+        </div>
+      </div>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(255,209,102,0.18);color:#b8860b">📱</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Digitaal vaardig</div>
+          <div class="kwal-desc">Van Snappet tot Google Classroom: ik zet digitale middelen doelgericht in voor gepersonaliseerd leren.</div>
+        </div>
+      </div>
+
+      <div class="kwal-card">
+        <div class="kwal-icon" style="background:rgba(167,139,250,0.12);color:#7c3aed">🔄</div>
+        <div class="kwal-body">
+          <div class="kwal-title">Reflectief & lerend</div>
+          <div class="kwal-desc">Ik sta stil bij mijn eigen handelen en blijf mezelf ontwikkelen — want een lerende leerkracht inspireert lerende kinderen.</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ── VISIE ── -->
 <section id="visie">
   <div class="visie-bg-shape"></div>
   <div class="section-inner">
@@ -974,78 +481,40 @@
       <div class="visie-pillars">
         <div class="pillar-card">
           <div class="pillar-icon" style="background:rgba(255,209,102,0.15)">🎯</div>
-          <div>
-            <div class="pillar-title">Hoge verwachtingen voor iedereen</div>
-            <div class="pillar-desc">Elk kind kan groeien — mijn aanpak past zich aan, mijn lat niet.</div>
-          </div>
+          <div><div class="pillar-title">Hoge verwachtingen voor iedereen</div><div class="pillar-desc">Elk kind kan groeien — mijn aanpak past zich aan, mijn lat niet.</div></div>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon" style="background:rgba(0,184,160,0.15)">🤝</div>
-          <div>
-            <div class="pillar-title">Veiligheid als fundament</div>
-            <div class="pillar-desc">Een kind dat zich veilig voelt, durft fouten te maken en te groeien.</div>
-          </div>
+          <div><div class="pillar-title">Veiligheid als fundament</div><div class="pillar-desc">Een kind dat zich veilig voelt, durft fouten te maken en te groeien.</div></div>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon" style="background:rgba(255,107,107,0.15)">🌱</div>
-          <div>
-            <div class="pillar-title">Voorbereiding op de toekomst</div>
-            <div class="pillar-desc">Ik bereid leerlingen voor op het VO: zelfstandigheid, planning en veerkracht.</div>
-          </div>
+          <div><div class="pillar-title">Voorbereiding op de toekomst</div><div class="pillar-desc">Ik bereid leerlingen voor op het VO: zelfstandigheid, planning en veerkracht.</div></div>
         </div>
         <div class="pillar-card">
           <div class="pillar-icon" style="background:rgba(167,139,250,0.15)">💬</div>
-          <div>
-            <div class="pillar-title">Partnerschap met ouders</div>
-            <div class="pillar-desc">School en thuis werken samen voor het beste resultaat.</div>
-          </div>
+          <div><div class="pillar-title">Partnerschap met ouders</div><div class="pillar-desc">School en thuis werken samen voor het beste resultaat.</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── HOBBY'S ── -->
 <section id="hobbys">
   <div class="section-inner">
     <span class="section-label label-navy">🎨 Hobby's & interesses</span>
     <h2 class="section-title">De <em>mens achter</em><br>de leerkracht</h2>
     <div class="hobby-grid">
-      <div class="hobby-card">
-        <span class="hobby-icon">📚</span>
-        <div class="hobby-name">Lezen</div>
-        <div class="hobby-desc">Non-fictie over onderwijs en psychologie</div>
-      </div>
-      <div class="hobby-card">
-        <span class="hobby-icon">🏃</span>
-        <div class="hobby-name">Hardlopen</div>
-        <div class="hobby-desc">Minstens 3x per week de benen los</div>
-      </div>
-      <div class="hobby-card">
-        <span class="hobby-icon">♟</span>
-        <div class="hobby-name">Schaken</div>
-        <div class="hobby-desc">Strategisch denken ook buiten de klas</div>
-      </div>
-      <div class="hobby-card">
-        <span class="hobby-icon">🎭</span>
-        <div class="hobby-name">Theater</div>
-        <div class="hobby-desc">Vrijwillig coach bij schoolmusical</div>
-      </div>
-      <div class="hobby-card">
-        <span class="hobby-icon">🌍</span>
-        <div class="hobby-name">Reizen</div>
-        <div class="hobby-desc">Inspiratie opdoen over de grenzen heen</div>
-      </div>
-      <div class="hobby-card">
-        <span class="hobby-icon">🍳</span>
-        <div class="hobby-name">Koken</div>
-        <div class="hobby-desc">Creatief en gezellig samenkomen</div>
-      </div>
+      <div class="hobby-card"><span class="hobby-icon">📚</span><div class="hobby-name">Lezen</div><div class="hobby-desc">Non-fictie over onderwijs en psychologie</div></div>
+      <div class="hobby-card"><span class="hobby-icon">🏃</span><div class="hobby-name">Hardlopen</div><div class="hobby-desc">Minstens 3x per week de benen los</div></div>
+      <div class="hobby-card"><span class="hobby-icon">♟</span><div class="hobby-name">Schaken</div><div class="hobby-desc">Strategisch denken ook buiten de klas</div></div>
+      <div class="hobby-card"><span class="hobby-icon">🎭</span><div class="hobby-name">Theater</div><div class="hobby-desc">Vrijwillig coach bij schoolmusical</div></div>
+      <div class="hobby-card"><span class="hobby-icon">🌍</span><div class="hobby-name">Reizen</div><div class="hobby-desc">Inspiratie opdoen over de grenzen heen</div></div>
+      <div class="hobby-card"><span class="hobby-icon">🍳</span><div class="hobby-name">Koken</div><div class="hobby-desc">Creatief en gezellig samenkomen</div></div>
     </div>
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
 <section id="contact">
   <div class="section-inner">
     <span class="section-label label-teal">📬 Contact</span>
@@ -1054,75 +523,35 @@
       <div>
         <p class="contact-intro">Bent u op zoek naar een enthousiaste, betrokken leerkracht voor groep 7 of 8? Ik vertel u graag meer over mezelf. U kunt me bereiken via:</p>
         <div class="contact-links">
-          <a href="/cdn-cgi/l/email-protection#8ae0e5fffda4e4ebebe7caefe7ebe3e6a4e4e6" class="contact-item">
-            <div class="contact-icon">📧</div>
-            <span class="__cf_email__" data-cfemail="e18b8e9496cf8f80808ca1848c80888dcf8f8d">[email&#160;protected]</span>
-          </a>
-          <a href="tel:+31612345678" class="contact-item">
-            <div class="contact-icon">📱</div>
-            +31 6 12 34 56 78
-          </a>
-          <a href="https://linkedin.com/in/jouwnaam" class="contact-item" target="_blank">
-            <div class="contact-icon">💼</div>
-            linkedin.com/in/jouwnaam
-          </a>
-          <a href="#" class="contact-item">
-            <div class="contact-icon">📍</div>
-            [Jouw Stad], Nederland
-          </a>
+          <a href="mailto:jouw@email.nl" class="contact-item"><div class="contact-icon">📧</div>jouw@email.nl</a>
+          <a href="tel:+31612345678" class="contact-item"><div class="contact-icon">📱</div>+31 6 12 34 56 78</a>
+          <a href="https://linkedin.com/in/jouwnaam" class="contact-item" target="_blank"><div class="contact-icon">💼</div>linkedin.com/in/jouwnaam</a>
+          <a href="#" class="contact-item"><div class="contact-icon">📍</div>[Jouw Stad], Nederland</a>
         </div>
       </div>
       <div class="contact-form">
-        <div class="form-group">
-          <label>Uw naam</label>
-          <input type="text" placeholder="Naam directeur / school">
-        </div>
-        <div class="form-group">
-          <label>E-mailadres</label>
-          <input type="email" placeholder="directeur@school.nl">
-        </div>
-        <div class="form-group">
-          <label>Bericht</label>
-          <textarea rows="4" placeholder="Uw bericht of uitnodiging voor een kennismakingsgesprek..."></textarea>
-        </div>
+        <div class="form-group"><label>Uw naam</label><input type="text" placeholder="Naam directeur / school"></div>
+        <div class="form-group"><label>E-mailadres</label><input type="email" placeholder="directeur@school.nl"></div>
+        <div class="form-group"><label>Bericht</label><textarea rows="4" placeholder="Uw bericht of uitnodiging voor een kennismakingsgesprek..."></textarea></div>
         <button class="btn-submit">✉ Verstuur bericht</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
   <p>Gemaakt door <strong>[Jouw Naam]</strong> · Leerkracht Groep 7 & 8 · <strong>© 2025</strong></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Scroll 
-  const reveals = document.querySelectorAll('.');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-
-  // Smooth active nav
+<script>
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 80) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--teal)' : '';
-    });
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
+    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--teal)' : ''; });
   });
 
-  // Video player
   function playVideo() {
     const thumb = document.getElementById('video-thumb');
     const iframe = document.getElementById('yt-iframe');
@@ -1132,13 +561,9 @@
     thumb.style.pointerEvents = 'none';
   }
 
-  // Contact form (demo)
   document.querySelector('.btn-submit').addEventListener('click', () => {
     alert('Bedankt voor uw bericht! Ik neem zo snel mogelijk contact met u op. 📬');
   });
-
-  // Skill bars animation on scroll
-  const skillBars = document.querySelectorAll('.skill-fill');
-  const barObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting
+</script>
+</body>
+</html>
